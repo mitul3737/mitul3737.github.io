@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mitul Shahriyar</title>
+<meta name="description" content="Mitul Shahriyar — technology professional, educator, and community builder in Bangladesh.">
+<meta property="og:title" content="Mitul Shahriyar">
+<meta property="og:description" content="Technology professional, educator and community builder in Bangladesh. Events, talks, credentials and learning series.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#1d3f9e">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a professional organizer's portfolio. Left-aligned editorial columns,
+   a conference name badge as the one bold mark in the hero,
+   and an event log set like a ledger with mono dates. */
+:root{
+  --paper:#f5f6f8;
+  --surface:#ffffff;
+  --ink:#121a26;
+  --ink-soft:#566173;
+  --rule:#dde1e7;
+  --green:#2450c8;
+  --sun:#0e9f6e;
+  --tint:#e9eef8;
+  --band:#1d3f9e;
+  --night:#0f1a2e;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body:"Hanken Grotesk", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0d1219; --surface:#141b25; --ink:#e8ecf2; --ink-soft:#9aa5b5;
+    --rule:#232d3b; --green:#7aa2ff; --sun:#34d399; --tint:#172235; --band:#2a4fb8; --night:#0a1220; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0d1219; --surface:#141b25; --ink:#e8ecf2; --ink-soft:#9aa5b5;
+  --rule:#232d3b; --green:#7aa2ff; --sun:#34d399; --tint:#172235; --band:#2a4fb8; --night:#0a1220; color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-0.02em}
+p{margin:0}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb, var(--paper) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none;display:flex;align-items:center;gap:8px}
+.brand i{width:12px;height:12px;border-radius:3px;background:var(--green);display:inline-block}
+nav.links{display:flex;gap:22px;font-size:15px}
+nav.links a{text-decoration:none;color:var(--ink-soft)}
+nav.links a:hover{color:var(--ink)}
+.cta{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:15px;padding:10px 18px;border-radius:999px;border:1px solid var(--ink);cursor:pointer;font-family:var(--body)}
+.cta.ghost{background:transparent;color:var(--ink)}
+.cta:hover{background:var(--green);border-color:var(--green);color:#fff}
+@media (max-width:780px){nav.links{display:none}}
+
+/* hero */
+.hero{padding-block:72px 56px;position:relative;overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(48px, 9vw, 112px);font-weight:800}
+.hero h1 .green{color:var(--green)}
+.hero .full{font-family:var(--mono);font-size:13px;color:var(--ink-soft);margin-top:18px}
+.hero .lede{font-size:clamp(19px,2.2vw,23px);max-width:34ch;margin-top:26px;color:var(--ink)}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.badge{max-width:340px;width:100%;justify-self:end;transform-origin:50% 0;animation:swing 1.2s cubic-bezier(.2,.7,.2,1) both}
+.badge .card{background:var(--surface);border:1px solid var(--rule);border-radius:20px;overflow:hidden;box-shadow:0 24px 48px -24px rgba(15,26,46,.45)}
+.badge .band{background:var(--band);color:#fff;padding:14px 22px 18px;display:flex;flex-direction:column;align-items:center;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.badge .slot{width:64px;height:10px;border-radius:6px;background:var(--paper)}
+.badge .who{padding:26px 24px;display:flex;flex-direction:column;gap:6px}
+.badge .who>b{font-family:var(--display);font-size:34px;font-weight:800;line-height:1.05;letter-spacing:-.02em}
+.badge .who>span{color:var(--ink-soft);font-size:15px}
+.badge .stat{margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);display:flex;align-items:baseline;gap:10px}
+.badge .stat b{font-family:var(--display);font-size:30px;font-weight:800;color:var(--green)}
+.badge .stat small{font-size:13px;color:var(--ink-soft)}
+@keyframes swing{from{transform:rotate(-4deg) translateY(-8px)}to{transform:none}}
+@media (max-width:820px){.hero .grid{grid-template-columns:1fr}.badge{justify-self:start}}
+
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.facts div{padding:22px 20px 22px 0;display:flex;flex-direction:column;gap:4px}
+.facts div+div{padding-left:20px;border-left:1px solid var(--rule)}
+.facts b{font-family:var(--display);font-size:34px;font-weight:800;font-variant-numeric:tabular-nums}
+.facts span{font-size:14px;color:var(--ink-soft)}
+@media (max-width:720px){.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(3){padding-left:0;border-left:0}.facts div:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+/* sections */
+section.block{padding-block:88px 24px}
+.head{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:40px}
+.head h2{font-size:clamp(34px,5vw,56px);font-weight:800}
+.head p{color:var(--ink-soft);margin-top:14px;max-width:56ch}
+@media (max-width:720px){.head{grid-template-columns:1fr;gap:10px}}
+
+.about{display:grid;grid-template-columns:200px 1fr 1fr;gap:32px}
+.about .col{display:flex;flex-direction:column;gap:18px;min-width:0}
+.about .col p{max-width:60ch}
+.roles{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.roles li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule);font-weight:500}
+.roles li span{font-family:var(--mono);font-size:12px;color:var(--ink-soft);text-align:right;padding-top:3px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:14px;padding:6px 12px;border:1px solid var(--rule);border-radius:999px;background:var(--surface)}
+@media (max-width:860px){.about{grid-template-columns:1fr}.about>.spacer{display:none}}
+
+/* featured community */
+.dcm{margin-top:56px;background:var(--tint);border-radius:24px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end}
+.dcm h3{font-size:clamp(30px,4vw,44px);font-weight:800}
+.dcm .quote{font-family:var(--display);font-size:20px;margin-top:14px;max-width:40ch;color:var(--green)}
+.dcm p.d{margin-top:12px;color:var(--ink-soft);max-width:58ch}
+@media (max-width:720px){.dcm{grid-template-columns:1fr;padding:28px}}
+
+/* events */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.filters button{font-family:var(--body);font-size:14px;font-weight:600;padding:8px 16px;border-radius:999px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.count{font-family:var(--mono);font-size:12px;color:var(--ink-soft);margin:14px 0 4px}
+.log{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.ev{display:grid;grid-template-columns:110px 1fr auto;gap:24px;padding:24px 0;border-bottom:1px solid var(--rule);align-items:start}
+.ev .date{font-family:var(--mono);font-variant-numeric:tabular-nums;line-height:1.2}
+.ev .date b{display:block;font-family:var(--display);font-size:40px;font-weight:800;letter-spacing:-.02em}
+.ev .date small{font-size:12px;letter-spacing:.06em;color:var(--ink-soft)}
+.ev h3{font-size:24px;font-weight:600}
+.ev .meta{font-size:14px;color:var(--ink-soft);margin-top:4px}
+.ev .desc{margin-top:10px;max-width:62ch}
+.ev .body{min-width:0}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:999px;white-space:nowrap;border:1px solid var(--rule);color:var(--ink-soft)}
+.pill.up{background:var(--tint);border-color:var(--green);color:var(--green)}
+@media (max-width:640px){.ev{grid-template-columns:76px 1fr}.ev .date b{font-size:30px}.ev .pill{grid-column:2;justify-self:start}}
+.luma{margin-top:24px;font-size:15px}
+.luma a{color:var(--green);font-weight:600}
+
+/* talks */
+.talks{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.talk{background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:12px}
+.talk h3{font-size:22px;font-weight:600}
+.talk p{color:var(--ink-soft);font-size:15px}
+.talk .where{margin-top:auto;padding-top:14px;border-top:1px dashed var(--rule)}
+.topics{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+@media (max-width:860px){.talks{grid-template-columns:1fr}}
+
+/* credentials */
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.badges{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.badges a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.badges a:hover h3{color:var(--green)}
+.badges h3{font-family:var(--body);font-size:17px;font-weight:600;letter-spacing:0}
+.badges .label{white-space:nowrap}
+.recog{display:flex;flex-direction:column;gap:14px}
+.recog div{padding:18px 20px;border-radius:14px;background:var(--tint)}
+.recog h3{font-size:20px;font-weight:600}
+.recog p{font-size:15px;color:var(--ink-soft);margin-top:4px}
+@media (max-width:860px){.creds{grid-template-columns:1fr}}
+
+/* youtube */
+.series{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:18px;overflow:hidden}
+.series a{background:var(--surface);padding:22px;text-decoration:none;display:flex;gap:16px;align-items:center;min-width:0}
+.series a:hover{background:var(--tint)}
+.series .ico{flex:none;width:48px;height:48px;border-radius:12px;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-family:var(--mono);font-size:13px;font-weight:500}
+.series h3{font-family:var(--body);font-size:16px;font-weight:600;letter-spacing:0}
+.series p{font-size:13px;color:var(--ink-soft)}
+@media (max-width:860px){.series{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.series{grid-template-columns:1fr}}
+
+/* contact */
+.contact{margin-top:96px;background:var(--night);color:#fff}
+.contact .wrap{padding-block:80px}
+.contact h2{font-size:clamp(40px,7vw,84px);font-weight:800;max-width:14ch}
+.contact p{margin-top:18px;max-width:50ch;opacity:.9}
+.mail{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.mail code{font-family:var(--mono);font-size:clamp(16px,2.6vw,22px);background:rgba(255,255,255,.12);padding:12px 18px;border-radius:12px;user-select:all;word-break:break-all}
+.mail button{font-family:var(--body);font-weight:600;font-size:15px;padding:12px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;cursor:pointer}
+.mail button:hover{background:#fff;color:#0f1a2e}
+.socials{margin-top:36px;display:flex;flex-wrap:wrap;gap:10px 28px}
+.socials a{color:#fff;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.4)}
+.socials a:hover{border-color:#fff}
+footer{padding-block:28px;font-size:14px;color:var(--ink-soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home"><i></i>Mitul Shahriyar</a>
+    <nav class="links" aria-label="Sections">
+      <a href="#about">About</a><a href="#events">Events</a><a href="#talks">Talks</a><a href="#credentials">Credentials</a><a href="#youtube">YouTube</a>
+    </nav>
+    <a class="cta" href="#contact">Let's connect</a>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <p class="label">Technology · Education · Community</p>
+          <h1 style="margin-top:18px">I build with tech. <span class="green">I bring people together.</span></h1>
+          <p class="full">Md Shahriyar Al Mustakim Mitul</p>
+          <p class="lede">Technology professional, educator and community builder. I connect students and industry professionals through hands-on learning in AI, cloud and developer tools.</p>
+          <div class="actions">
+            <a class="cta" href="#events">See upcoming events</a>
+            <a class="cta ghost" href="#contact">Invite me to speak</a>
+          </div>
+        </div>
+        <div class="badge" aria-hidden="true">
+          <div class="card">
+            <div class="band"><span class="slot"></span><span>Organizer · Speaker · Educator</span></div>
+            <div class="who">
+              <b>Mitul Shahriyar</b>
+              <span>Founder, DevChangeMakers</span>
+              <span>Dhaka, Bangladesh</span>
+              <div class="stat"><b>50+</b><small>events organized on AI/ML, DevOps, quantum and cloud</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="facts">
+      <div><b>2021</b><span>Started community work</span></div>
+      <div><b>50+</b><span>Events organized on AI/ML, DevOps, quantum and cloud</span></div>
+      <div><b>10+</b><span>Dhaka user groups led</span></div>
+      <div><b>7+</b><span>In-person events in 2026</span></div>
+    </div>
+  </div>
+
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="about">
+        <p class="label spacer">About</p>
+        <div class="col">
+          <h2 style="font-size:clamp(34px,5vw,56px);font-weight:800">Technology gets more useful when it's shared.</h2>
+          <p>I work where technology, education and developer communities meet. My interests are artificial intelligence, machine learning, MLOps, cloud computing and quantum computing.</p>
+          <p>I help students and professionals turn curiosity into real projects through workshops, meetups and hackathons across Bangladesh. I recently started my Master's at BRAC University, where I also started the university's AWS Cloud Club.</p>
+          <div class="chips" aria-label="Interests">
+            <span>AI &amp; ML</span><span>MLOps</span><span>Cloud</span><span>Kubernetes</span><span>DevOps</span><span>Quantum computing</span>
+          </div>
+        </div>
+        <div class="col">
+          <p class="label">Roles</p>
+          <ul class="roles">
+            <li>Founder, DevChangeMakers <span>Community</span></li>
+            <li>AWS Community Builder <span>Machine Learning</span></li>
+            <li>Co-Lead, AWS User Group Bangladesh <span>Dhaka</span></li>
+            <li>GitHub Campus Expert <span>GitHub</span></li>
+            <li>Stripe Community Builder <span>Stripe</span></li>
+            <li>Ambassador <span>Cerebras · Cognition · Qwen</span></li>
+          </ul>
+          <p class="label" style="margin-top:8px">Dhaka groups I help lead</p>
+          <div class="chips">
+            <span>AWS UG BD</span><span>Dhaka GitHub UG</span><span>Friends of Figma</span><span>HashiCorp UG</span><span>IBM Qiskit UG</span><span>Grafana &amp; Friends</span><span>CNCG Dhaka</span><span>AAIF Dhaka</span><span>SpaceXAI Dhaka</span><span>Claude Dhaka</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dcm">
+        <div>
+          <p class="label">The community I founded</p>
+          <h3 style="margin-top:10px">DevChangeMakers</h3>
+          <p class="quote">"Don't ask for guidelines. Take your time and guide yourself."</p>
+          <p class="d">A free, project-focused community for self-driven students. We run technical workshops, hackathons, mentoring, meetups and open source work. No courses to sell.</p>
+        </div>
+        <a class="cta" href="https://devchangemakers.org" target="_blank" rel="noopener">Visit devchangemakers.org</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="events">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Event log</p>
+        <div>
+          <h2>Good things happen when we get together.</h2>
+          <p>Hands-on workshops, developer meetups and build days across Dhaka.</p>
+        </div>
+      </div>
+      <div class="filters" role="group" aria-label="Filter events">
+        <button type="button" id="f-all" data-f="all" aria-pressed="true">All</button>
+        <button type="button" id="f-up" data-f="up" aria-pressed="false">Upcoming</button>
+        <button type="button" id="f-past" data-f="past" aria-pressed="false">Past</button>
+      </div>
+      <p class="count" id="count"></p>
+      <ul class="log" id="log"></ul>
+      <p class="luma">Registration for upcoming events is on the <a href="https://luma.com/DevChangeMakersANBS" target="_blank" rel="noopener">DevChangeMakers Luma calendar</a>.</p>
+    </div>
+  </section>
+
+  <section class="block" id="talks">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Speaking</p>
+        <div>
+          <h2>From ideas to hands-on learning.</h2>
+          <p>Recent sessions. I'm available for university sessions, community meetups, technical workshops and professional events.</p>
+        </div>
+      </div>
+      <div class="talks">
+        <article class="talk">
+          <p class="label">AI development</p>
+          <h3>Cerebras Cafe Compute</h3>
+          <p>Fast AI inference and practical API development with the Cerebras ecosystem.</p>
+          <p class="label where">AI Unscripted · UIU · Sep 2026</p>
+        </article>
+        <article class="talk">
+          <p class="label">Developer workflows</p>
+          <h3>Building apps with GitHub Copilot</h3>
+          <p>Using AI-assisted development to go from a project idea to a working app.</p>
+          <p class="label where">GitHub Dev Day · UAP · Sep 2026</p>
+        </article>
+        <article class="talk">
+          <p class="label">Agentic engineering</p>
+          <h3>Devin Code Scan &amp; SWE-2</h3>
+          <p>How AI tools can support code review and software engineering workflows.</p>
+          <p class="label where">Build with Cognition · UAP · Sep 2026</p>
+        </article>
+      </div>
+      <div class="topics">
+        <p class="label">Topics: AI · ML · MLOps · Cloud · Developer tools · Quantum</p>
+        <a class="cta ghost" href="#contact">Invite me to speak</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="credentials">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Credentials</p>
+        <div>
+          <h2>Always learning. Always sharing.</h2>
+          <p>Certifications in cloud, AI and source control. Each one links to its verified badge on Credly.</p>
+        </div>
+      </div>
+      <div class="creds">
+        <ul class="badges">
+          <li><a href="https://www.credly.com/badges/3a7d6b26-34bb-482e-8c6b-4f9fca7eff75/public_url" target="_blank" rel="noopener"><h3>AWS Certified Cloud Practitioner</h3><span class="label">AWS ↗</span></a></li>
+          <li><a href="https://www.credly.com/badges/b70e053b-970d-4f2b-956b-14d1b2de2eb7/public_url" target="_blank" rel="noopener"><h3>Microsoft Certified: AI Fundamentals</h3><span class="label">Microsoft ↗</span></a></li>
+          <li><a href="https://www.credly.com/badges/e1843471-ab5b-49e8-a30a-453dac582273/public_url" target="_blank" rel="noopener"><h3>GitHub Foundations</h3><span class="label">GitHub ↗</span></a></li>
+          <li><a href="https://www.credly.com/badges/afa3e4dc-4a27-433f-a721-3218c75760d1/public_url" target="_blank" rel="noopener"><h3>GitLab Certified Git Associate</h3><span class="label">GitLab ↗</span></a></li>
+          <li><a href="https://www.credly.com/badges/bcc30cc6-c6b5-48cf-a806-10d41812fe5d/public_url" target="_blank" rel="noopener"><h3>SC102: Source Control Management with Git</h3><span class="label">Git ↗</span></a></li>
+        </ul>
+        <div class="recog">
+          <p class="label">Community recognition</p>
+          <div><h3>AWS Community Builder</h3><p>Machine Learning track. Supporting learning and knowledge sharing in the AWS community.</p></div>
+          <div><h3>GitHub Campus Expert</h3><p>Building inclusive technical communities where students learn by collaborating.</p></div>
+          <div><h3>Cerebras · Cognition · Qwen</h3><p>Connecting local developers with AI tools, workshops and practical learning.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="youtube">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">YouTube</p>
+        <div>
+          <h2>Keep the learning going.</h2>
+          <p>Free series on cloud, machine learning, DevOps, quantum computing and software engineering. <a href="https://www.youtube.com/@mitul_shahriyar" target="_blank" rel="noopener" style="color:var(--green);font-weight:600">Visit the channel</a>.</p>
+        </div>
+      </div>
+      <div class="series">
+        <a href="https://www.youtube.com/playlist?list=PLnWU-uBefLnFeVk69FWr6ZVLoQBMysGIE" target="_blank" rel="noopener"><span class="ico">AWS</span><div><h3>AWS Series</h3><p>Amazon Web Services</p></div></a>
+        <a href="https://www.youtube.com/playlist?list=PLnWU-uBefLnEO5vBG4k_NqWdqf295zSd0" target="_blank" rel="noopener"><span class="ico">AZ</span><div><h3>Azure Series</h3><p>Microsoft Azure</p></div></a>
+        <a href="https://www.youtube.com/playlist?list=PLJshh3LhSR80" target="_blank" rel="noopener"><span class="ico">GCP</span><div><h3>GCP Series</h3><p>Google Cloud Platform</p></div></a>
+        <a href="https://www.youtube.com/playlist?list=PLnWU-uBefLnEZOfcs0cGDsEEJg5ybCvjH" target="_blank" rel="noopener"><span class="ico">Ops</span><div><h3>DevOps Series</h3><p>Development, operations, automation</p></div></a>
+        <a href="https://www.youtube.com/playlist?list=PLnWU-uBefLnFDgp_4kyYb68ciSm2uiMTU" target="_blank" rel="noopener"><span class="ico">ML</span><div><h3>ML Advanced Series</h3><p>Advanced machine learning</p></div></a>
+        <a href="https://www.youtube.com/playlist?list=PLnWU-uBefLnFw6jL9B08EMNdhcXoeQ0qm" target="_blank" rel="noopener"><span class="ico">Q</span><div><h3>Quantum Computing</h3><p>Qubits to circuits</p></div></a>
+        <a href="https://www.youtube.com/playlist?list=PLVZMJxTIgLlQ" target="_blank" rel="noopener"><span class="ico">Py</span><div><h3>DSA in Python</h3><p>Data structures and algorithms</p></div></a>
+        <a href="https://www.youtube.com/playlist?list=PLTQNu3U1klUE" target="_blank" rel="noopener"><span class="ico">SD</span><div><h3>System Design</h3><p>Designing software systems</p></div></a>
+        <a href="https://www.youtube.com/playlist?list=PLTowE2wtvqUo" target="_blank" rel="noopener"><span class="ico">&lt;/&gt;</span><div><h3>Tech Projects</h3><p>Walkthroughs and explainers</p></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="label" style="color:rgba(255,255,255,.75)">Let's connect</p>
+      <h2 style="margin-top:14px">Let's build something together.</h2>
+      <p>Speaking invitations, workshops, community partnerships and technology projects. Based in Bangladesh, open to collaborating anywhere.</p>
+      <div class="mail">
+        <code id="email">mitulshahriyar@gmail.com</code>
+        <button type="button" id="copy">Copy email</button>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/mitul-shahriyar/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/mitul3737" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://x.com/mitul_shahriyar" target="_blank" rel="noopener">X</a>
+        <a href="https://youtube.com/@mitul_shahriyar" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/mitulshahriyar.tech" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://luma.com/DevChangeMakersANBS" target="_blank" rel="noopener">Luma</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Mitul Shahriyar</span><a href="#home">Back to top ↑</a></div>
+</footer>
+
+<script>
+(function(){
+  var events=[
+    {d:"2026-12-12",t:"AWS Community Day Bangladesh 2026",m:"Independent University, Bangladesh (IUB) · Organizer",x:"The annual gathering for students, professionals and AWS community members. Two tracks of talks plus hands-on workshops, with AWS support."},
+    {d:"2026-10-31",t:"OctoberFest: Dhaka",m:"Collaborative build day · Organizer · 12:00–19:00",x:"One project, six technologies. A day of building with AI, cloud and developer tools for university students and early-career professionals. Lunch and snacks included."},
+    {d:"2026-10-30",t:"The Another Event",m:"Dhaka Tech Week · Organizer",x:"A university-student focused event, part of our community's lineup for Dhaka Tech Week."},
+    {d:"2026-09-24",t:"GitHub Dev Day + Build with Cognition",m:"University of Asia Pacific · Organizer & speaker",x:"Building apps with GitHub Copilot and healthcare innovation with Devin, including Devin Code Scan and a SWE-2 demo."},
+    {d:"2026-09-20",t:"AI Unscripted",m:"United International University · Speaker",x:"A multi-session campus program with Cerebras Cafe Compute and community Q&A. My session covered Cerebras and practical AI development."},
+    {d:"2026-09-18",t:"Astra Commons: Dhaka",m:"Moar Dhanmondi 27 · Organizer",x:"A hands-on developer gathering to build with Codex and the OpenAI API, share projects and meet the local community."},
+    {d:"2026-07-13",t:"Agentic AI Hackathon",m:"Finale at IUT · Community event",x:"A week-long community hackathon, July 13–20, with the final showcase at Islamic University of Technology.",mo:true}
+  ];
+  var M=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+  var today=new Date();today.setHours(0,0,0,0);
+  var log=document.getElementById("log"),count=document.getElementById("count");
+  events.forEach(function(e){
+    var p=e.d.split("-"),dt=new Date(+p[0],+p[1]-1,+p[2]);
+    e.up=dt>=today;
+    var li=document.createElement("li");li.className="ev";li.dataset.up=e.up?"1":"0";
+    li.innerHTML='<div class="date"><b>'+(e.mo?M[+p[1]-1]:p[2])+'</b><small>'+(e.mo?p[0]:M[+p[1]-1]+" "+p[0])+'</small></div>'+
+      '<div class="body"><h3></h3><p class="meta"></p><p class="desc"></p></div>'+
+      '<span class="pill'+(e.up?' up':'')+'">'+(e.up?'Upcoming':'Past')+'</span>';
+    li.querySelector("h3").textContent=e.t;li.querySelector(".meta").textContent=e.m;li.querySelector(".desc").textContent=e.x;
+    log.appendChild(li);
+  });
+  function apply(f){
+    var n=0;
+    log.querySelectorAll(".ev").forEach(function(li){var show=f==="all"||(f==="up")===(li.dataset.up==="1");li.hidden=!show;if(show)n++;});
+    count.textContent=n+(n===1?" event":" events");
+    document.querySelectorAll(".filters button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.f===f?"true":"false");});
+    try{localStorage.setItem("ev-filter",f)}catch(_){}
+  }
+  document.querySelectorAll(".filters button").forEach(function(b){b.addEventListener("click",function(){apply(b.dataset.f)})});
+  var saved="all";try{saved=localStorage.getItem("ev-filter")||"all"}catch(_){}
+  apply(saved);
+
+  var btn=document.getElementById("copy"),em=document.getElementById("email");
+  btn.addEventListener("click",function(){
+    function sel(){var r=document.createRange();r.selectNodeContents(em);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent="Selected — press copy";}
+    try{navigator.clipboard.writeText(em.textContent).then(function(){btn.textContent="Copied";setTimeout(function(){btn.textContent="Copy email"},1800)},sel)}catch(_){sel()}
+  });
+})();
+</script>
+
+</body>
+</html>
